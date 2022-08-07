@@ -161,13 +161,13 @@ func (comp *Compiler) resolveCatalogRefs(qc *QueryCatalog, rvs []*ast.RangeVar, 
 								search = []*ast.TableName{fqn}
 							}
 						}
-						if !located {
-							return nil, &sqlerr.Error{
-								Code:     "42703",
-								Message:  fmt.Sprintf("table alias \"%s\" does not exist", alias),
-								Location: left.Location,
-							}
-						}
+						// if !located {
+						// 	return nil, &sqlerr.Error{
+						// 		Code:     "42703",
+						// 		Message:  fmt.Sprintf("table alias \"%s\" does not exist", alias),
+						// 		Location: left.Location,
+						// 	}
+						// }
 					}
 				}
 
